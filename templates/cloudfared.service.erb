@@ -1,0 +1,13 @@
+[Unit]
+Description=Cloudflared HTTPS DNS proxy
+After=network.target
+
+[Service]
+User=<%= scope.lookupvar('cloudflared::daemon_user') %>
+WorkingDirectory=<%= scope.lookupvar('cloudflared::config_dir') %>
+ExecStart=<%= scope.lookupvar('cloudflared::exec_dir') %>/<%= scope.lookupvar('cloudflared::exec_file') %> <%= scope.lookupvar('cloudflared::config_file') %>
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
