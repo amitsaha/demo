@@ -6,7 +6,7 @@
 #
 # @example
 #   include cloudflared
-class cloudflared {
+class cloudflared (
   String $daemon_user = 'cloudflared',
 
   String $config_dir = '/etc/cloudflared',
@@ -14,6 +14,5 @@ class cloudflared {
   String $exec_dir = '/usr/share/cloudflared',
   String $exec_file = 'cloudflared',
 ) {
-      include cloudflared::service
-  }
+    include cloudflared::service
 }

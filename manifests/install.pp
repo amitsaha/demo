@@ -21,20 +21,14 @@ class cloudflared::install {
     notify  => Service['cloudflared'],
   }
 
-  $filename = 'https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz'
+  $filename     = 'cloudflared'
+  $download_url = 'https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz'
 
-  archive { $filename:
-      path => "/tmp/$filename
-
-    file{ "${cloudflared::exec_dir}/${cloudflared_bin}":
-    mode    => '0755',
-    require => Wget::Fetch['download cloudflared-exec'],
-  }
-
-  file{ "${cloudflared::exec_dir}/${cloudflared::exec_file}":
-    ensure  => 'link',
-    notify  => Service['cloudflared'],
-    target  => "${cloudflared::exec_dir}/${cloudflared_bin}",
-    require => Wget::Fetch['download cloudflared-exec'],
+  archive { "/tmp/${filename}.tar.gz":
+    source       => $download_url,
+    extract      => true,
+    extract_path => $cloudflared::config_dir,
+    creates      => "${cloudflared::config_dir}/${filename}",
+    notify       => Service['cloudflared'],
   }
 }
