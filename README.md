@@ -1,6 +1,8 @@
 # Notes:
 
 - Update .fixtures.yml with the external dependencies
+- update Gemfile with beaker deps
+
 -
 # cloudflared
 
