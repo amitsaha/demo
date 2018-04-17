@@ -8,7 +8,6 @@
 #   include cloudflared
 class cloudflared (
   String $daemon_user = 'cloudflared',
-
   String $config_dir = '/etc/cloudflared',
   String $config_file = 'config.yaml',
   String $exec_dir = '/usr/share/cloudflared',

@@ -6,6 +6,13 @@ describe 'cloudflared::install' do
       let(:facts) { os_facts }
       let(:pre_condition) { 'include cloudflared' }
       it { is_expected.to compile }
+
+      it { is_expected.to contain_archive('/tmp/cloudflared.tar.gz')
+        .with(
+          :source => 'https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz',
+        )
+      }
+
     end
   end
 end
