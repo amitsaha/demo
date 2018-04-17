@@ -27,8 +27,8 @@ class cloudflared::install {
   archive { "/tmp/${filename}.tar.gz":
     source       => $download_url,
     extract      => true,
-    extract_path => $cloudflared::config_dir,
-    creates      => "${cloudflared::config_dir}/${filename}",
+    extract_path => $cloudflared::exec_dir,
+    creates      => "${cloudflared::exec_dir}/${filename}",
     notify       => Service['cloudflared'],
   }
 }

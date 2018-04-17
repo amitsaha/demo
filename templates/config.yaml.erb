@@ -1,4 +1,9 @@
+# The port config acually doesn't work
+# https://github.com/cloudflare/cloudflared/issues/7
+# so, we specify in the systemd service file
+port: '5353'
+metrics: '127.0.0.1:3353'
 proxy-dns: true
 proxy-dns-upstream:
-  - https://1.1.1.1/dns-query
-  - https://1.0.0.1/dns-query
+  - 'https://1.1.1.1/dns-query'
+  - 'https://1.0.0.1/dns-query'
