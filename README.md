@@ -8,10 +8,10 @@ The main goals are:
 - An example puppet module written and managed using [pdk](https://github.com/puppetlabs/pdk)
 - Demonstrate writing unit tests using [rspec-puppet](https://puppet.com/blog/unit-testing-rspec-puppet-for-beginners)
 - Demonstrate acceptance testing using [beaker](https://github.com/puppetlabs/beaker)
-[] Automated testing
-[] Automated release management
-[] Deploy to puppet forge
-[] Others 
+- [] Automated testing
+- [] Automated release management
+- [] Deploy to puppet forge
+- [] Others 
 
 ## Notes
 
