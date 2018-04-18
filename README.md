@@ -13,6 +13,7 @@ The main goals are:
 - [ ] Automated testing
 - [ ] Automated release management
 - [ ] Deploy to puppet forge
+- [ ] Add documentation
 
 ## Notes
 
