@@ -1,5 +1,7 @@
 # Puppet module demo - cloudflared
 
+[![Build Status](https://travis-ci.org/amitsaha/puppet-cloudflared.svg?branch=master)](https://travis-ci.org/amitsaha/puppet-cloudflared)
+
 This is an example [puppet](https://puppet.com/) module which installs and configures 
 [cloudflared](https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy/).
 
